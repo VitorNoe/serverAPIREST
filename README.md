@@ -115,3 +115,14 @@ lead-management-api/
 ├── requirements.txt         # Dependências do projeto
 └── README.md                # Documentação do Projeto
 ```
+
+## Desafios:
+
+```
+Desafio 1: Adicionar novos campos ao modelo Lead: No arquivo models.py
+Desafio 2: Implementar Validações no Cadastro de Lead: No arquivo utils.py
+Desafio 3: Paginação na Listagem de Leads: No arquivo api_handler.py
+Desafio 4: Implementar Pesquisa por Nome:
+Desafio 5: Adicionar Autenticação à API:
+Desafio 6: Criar Testes Automatizados:
+```
