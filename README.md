@@ -2,7 +2,7 @@
 
 ## Introdução ao Projeto
 
-A **Lead Management API** é uma aplicação baseada em Flask para gerenciar leads de vendas. A API permite criar, listar, atualizar e deletar leads, armazenando informações como nome, email, telefone, localização geográfica (latitude e longitude), temperatura e interesse.
+Este projeto é uma aplicação baseada em Flask para gerenciar leads de vendas. A API permite criar, listar, atualizar e deletar leads, armazenando informações como nome, email, telefone, localização geográfica (latitude e longitude), temperatura e interesse.
 
 ## Funcionalidades
 
