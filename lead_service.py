@@ -11,26 +11,26 @@ class LeadService:
 		return re.match(regex, email) is not None
 
 	@staticmethod
-	def is_valid_cellphone(cellphone):
+	def is_valid_telefone(telefone):
 		regex = r'^\(\d{2}\) \d{4, 5}-\d{4}$'
-		return re.match(regex, cellphone) is not None
+		return re.match(regex, telefone) is not None
 
 	@staticmethod
 	def is_unique_email(email):
-		return Lead.query.filter_by(email=email)first() is None
+		return Lead.query.filter_by(email=email).first() is None
 
 	@staticmethod
 	def create_lead(data):
 		name = data.get('name')
 		email = data.get('email')
-		cellphone = data.get('cellphone')
+		telefone = data.get('telefone')
 		latitude = data.get('latitude')
 		longitude = data.get('longitude')
 		temperature = data.get('temperature')
 		interest = data.get('interest')
 
-	def create_lead(self, name, email, cellphone, latitude, longitude, temperature, interest):
-		lead = Lead(name=name, email=email, cellphone=cellphone, latitude=latitude, longitude=longitude, temperature=temperature, interest=interest)
+	def create_lead(self, name, email, telefone, latitude, longitude, temperature, interest):
+		lead = Lead(name=name, email=email, telefone=telefone, latitude=latitude, longitude=longitude, temperature=temperature, interest=interest)
 		self.db.session.add(lead)
 		self.db.session.commit()
 
@@ -40,11 +40,11 @@ class LeadService:
 	def get_lead_by_id(self, lead_id):
 		return Lead.query.get_or_404(lead_id)
 
-	def update_lead(self, lead_id, name, email, cellphone, latitude, longitude, temperature, interest):
+	def update_lead(self, lead_id, name, email, telefone, latitude, longitude, temperature, interest):
 		lead = self.get_lead_by_id(lead_id)
 		lead.name = name
 		lead.email = email
-		lead.cellphone = cellphone
+		lead.telefone = telefone
 		lead.latitude = latitude
 		lead.longitude = longitude
 		lead.temperature = temperature
