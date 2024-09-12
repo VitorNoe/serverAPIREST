@@ -22,3 +22,16 @@ Certifique-se de ter o Python 3.8+ instalado. Clone o repositório e instale as 
 git clone https://github.com/seu-usuario/lead-management-api.git
 cd lead-management-api
 pip install -r requirements.txt
+```
+
+##Estrutura do Projeto
+lead-management-api/
+│
+├── app.py                   # Arquivo principal do Flask
+├── api_handler.py           # Manipulador de Rotas e Lógica da API
+├── lead_service.py          # Lógica de Negócio e Acesso ao Banco de Dados
+├── models.py                # Definição do Modelo de Dados com SQLAlchemy
+├── database.py              # Conexão e Inicialização do Banco de Dados
+├── generate_leads.py        # Script para gerar dados fictícios
+├── requirements.txt         # Dependências do projeto
+└── README.md                # Documentação do Projeto
