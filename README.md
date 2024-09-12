@@ -112,7 +112,6 @@ lead-management-api/
 ├── lead_service.py          # Lógica de Negócio e Acesso ao Banco de Dados
 ├── models.py                # Definição do Modelo de Dados com SQLAlchemy
 ├── database.py              # Conexão e Inicialização do Banco de Dados
-├── generate_leads.py        # Script para gerar dados fictícios
 ├── requirements.txt         # Dependências do projeto
 └── README.md                # Documentação do Projeto
 ```
