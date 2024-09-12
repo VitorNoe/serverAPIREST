@@ -1,31 +1,31 @@
-from flask_sqlalchemy import SQLAlchemy
+from database import db  # Use a instância de db existente
 
-# Inicializando o banco de dados
-db = SQLAlchemy()
-
-# Definindo o modelo para o Lead
 class Lead(db.Model):
     __tablename__ = 'leads'
-    
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    cellphone = db.Column(db.String(15), nullable=False)
     latitude = db.Column(db.Float, nullable=False)
     longitude = db.Column(db.Float, nullable=False)
     temperature = db.Column(db.Float, nullable=False)
     interest = db.Column(db.String(200), nullable=False)
-
-    def __init__(self, name, latitude, longitude, temperature, interest):
+    
+    def __init__(self, name, email, cellphone, latitude, longitude, temperature, interest):
         self.name = name
+        self.email = email
+        self.cellphone = cellphone
         self.latitude = latitude
         self.longitude = longitude
         self.temperature = temperature
         self.interest = interest
 
-    # Função para retornar os dados como dicionário
     def as_dict(self):
         return {
             'id': self.id,
             'name': self.name,
+            'email': self.email,
+            'cellphone': self.cellphone,
             'latitude': self.latitude,
             'longitude': self.longitude,
             'temperature': self.temperature,
