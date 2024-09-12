@@ -1,8 +1,3 @@
-Vou criar um exemplo detalhado de um arquivo `README.md` para o seu projeto no repositório GitHub. Este documento incluirá a introdução ao projeto, instruções de instalação e execução, exemplos de uso da API, e detalhes sobre cada rota da API, conforme solicitado.
-
-### Exemplo de `README.md`
-
-```markdown
 # Lead Management API
 
 ## Introdução ao Projeto
