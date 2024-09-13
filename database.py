@@ -8,11 +8,16 @@ class DatabaseConnection:
             self.init_app(app)
 
     def init_app(self, app):
-        db.init_app(app)  # Associa o SQLAlchemy ao app Flask
+        db.init_app(app)
 
     def get_db(self):
         return db
 
     def initialize_db(self, app):
-        with app.app_context():
-            db.create_all()  # Cria as tabelas do banco de dados, se não existirem
+        try:
+            with app.app_context():
+                db.create_all()
+                print("Banco de dados inicializado com sucesso.")
+        except Exception as e:
+            print(f"Erro ao inicializar o banco de dados: {e}")
+            raise 
