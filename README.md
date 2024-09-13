@@ -122,7 +122,7 @@ lead-management-api/
 Desafio 1: Adicionar novos campos ao modelo Lead: No arquivo models.py
 Desafio 2: Implementar Validações no Cadastro de Lead: No arquivo utils.py
 Desafio 3: Paginação na Listagem de Leads: No arquivo api_handler.py
-Desafio 4: Implementar Pesquisa por Nome:
-Desafio 5: Adicionar Autenticação à API:
-Desafio 6: Criar Testes Automatizados:
+Desafio 4: Implementar Pesquisa por Nome: No arquivo lead_service.py
+Desafio 5: Adicionar Autenticação à API: No arquivo auth.py
+Desafio 6: Criar Testes Automatizados: No arquivo test_api.py
 ```
